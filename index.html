@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Aware Recommendation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="landingPage">
+        <div class="hdg">
+            <h1>Welcome to Mood Analyzer</h1>
+            <p>Discover your mood and get personalized recommendations.</p>
+        </div>
+
+        <div class="landing-content">
+            <img src="happy.jpg" alt="Happy" class="mood-image">
+            <img src="sad.jpg" alt="Sad" class="mood-image">
+            <img src="angry.jpg" alt="Angry" class="mood-image">
+            <img src="neutral.jpg" alt="Neutral" class="mood-image">
+        </div>
+
+        <div class="landing-quotes">
+            <p>"The only way to do great work is to love what you do." - Steve Jobs</p>
+            <p>"Believe you can and you're halfway there." - Theodore Roosevelt</p>
+            <p>"Happiness is not by chance, but by choice." - Jim Rohn</p>
+        </div>
+
+        <button onclick="goToAnalyzer()">Enter Mood Analyzer</button>
+    </div>
+
+    <div class="container" id="analyzerPage" style="display: none;">
+        <h1>Mood Analyzer</h1>
+        <p>Upload a photo, record your voice, or type text to analyze your mood.</p>
+        
+        <div class="input-section">
+            <input type="file" id="imageUpload" accept="image/*">
+            <button onclick="analyzeMood('photo')">Analyze Photo</button>
+            <textarea id="textInput" placeholder="Type how you feel..." onkeypress="handleKeyPress(event)"></textarea>
+            <button onclick="analyzeMood('text')">Analyze Text</button>
+            <button onclick="recordAudio()">Record Voice</button>
+        </div>
+
+        <h2>Detected Mood: <span id="mood">Waiting...</span></h2>
+        <h3>Recommended Activities:</h3>
+        <div id="recommendations"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity"></script>
+</body>
+</html>
