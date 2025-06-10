@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: aqua;
+    padding: 20px;
+}
+
+h1{
+    font-family: olive;
+    text-decoration: underline;
+}
+
+.container {
+    background: rgb(237, 154, 168);
+    padding: 20px;
+    border-radius: 10px;
+    border: black double;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    height: 750px;
+    margin: auto;
+}
+
+.input-section {
+    margin: 20px 0;
+}
+
+textarea {
+    width: 80%;
+    height: 150px;
+    margin-top: 10px;
+    text-align: center;
+    border: black solid;
+}
+
+button {
+    padding: 10px;
+    margin: 10px;
+    background: green;
+    color: white;
+    border: black dotted;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+#recommendations {
+    margin-top: 20px;
+    padding: 10px;
+    background: #81bae3;
+    border-radius: 5px;
+}
+
+.hdg{
+    text-decoration: underline;
+}
+
+h3 {
+    background-color: yellow;
+    width: 250px;
+    border-radius: 25px;
+}
+
+/* Landing Page Styles */
+#landingPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-content {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0;
+}
+
+.mood-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid black;
+}
+
+.landing-quotes {
+    margin: 20px 0;
+}
+
+/* Hide analyzer page initially */
+#analyzerPage {
+    display: none;
+}
